@@ -1,0 +1,9 @@
+<SecurityGroupSid>
+  <!--Zero or more repetitions:-->
+  <row>
+    <!--Zero or more repetitions:-->
+    <attribute name="string">
+      <value>string</value>
+    </attribute>
+  </row>
+</SecurityGroupSid>
