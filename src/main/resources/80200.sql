@@ -1,3 +1,6 @@
+update MTCUEAPOUTCOMESURVEY mtcueos set mtcueos.eapoutcomedate = to_date('09-DEC-22 00:00:00','DD-MON-RR HH24:MI:SS') where mtcueos.caseid = (select c.caseid from MTCUEAPOUTCOMESURVEY e
+                                                                                                                                                                       join caseheader c on e.caseid = c.caseid and c.casereference =  7558022);  -- 7558022
+
 update MTCUEAPOUTCOMESURVEY mtcueos set mtcueos.eapoutcomedate = to_date('09-DEC-22 00:00:00','DD-MON-RR HH24:MI:SS') where caseid = 5598994872590663680;  -- 7558022
 update casereview set SCHEDULEDSTARTDATE = to_date('09-JAN-23 00:00:00','DD-MON-RR HH24:MI:SS') where  CASEID = 5598994872590663680and REASONCODE = 'CR14';
 update casereview set SCHEDULEDSTARTDATE = to_date('09-MAR-23 00:00:00','DD-MON-RR HH24:MI:SS') where  CASEID = 5598994872590663680 and REASONCODE = 'CR5';
