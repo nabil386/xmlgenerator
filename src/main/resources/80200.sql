@@ -1,7 +1,6 @@
 update MTCUEAPOUTCOMESURVEY mtcueos set mtcueos.eapoutcomedate = to_date('09-DEC-22 00:00:00','DD-MON-RR HH24:MI:SS') where mtcueos.caseid = (select c.caseid from MTCUEAPOUTCOMESURVEY e
 
-update casereview cr set cr.SCHEDULEDSTARTDATE = to_date('09-JAN-23 00:00:00','DD-MON-RR HH24:MI:SS') where  cr.CASEID = (select c.caseid from MTCUEAPOUTCOMESURVEY e
-                                                                                                                                                   join caseheader c on e.caseid = c.caseid and c.casereference =  7558022) and cr.REASONCODE = 'CR14'; -- Outcome at 1 month
+update casereview cr set cr.SCHEDULEDSTARTDATE = to_date('09-JAN-23 00:00:00','DD-MON-RR HH24:MI:SS') where cr.CASEID = (select c.caseid from MTCUEAPOUTCOMESURVEY e join caseheader c on e.caseid = c.caseid and c.casereference = 7558022) and cr.REASONCODE = 'CR14'; -- Outcome at 1 month
                                                                                                                                                                        join caseheader c on e.caseid = c.caseid and c.casereference =  7558022);  -- 7558022
                                                                                                                                                                        join caseheader c on e.caseid = c.caseid and c.casereference =  7558022);  -- 7558022
 
