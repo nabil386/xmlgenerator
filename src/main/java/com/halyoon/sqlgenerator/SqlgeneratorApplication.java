@@ -1,13 +1,13 @@
-package com.halyoon.xmlgenerator;
+package com.halyoon.sqlgenerator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class XmlgeneratorApplication {
+public class SqlgeneratorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(XmlgeneratorApplication.class, args);
+		SpringApplication.run(SqlgeneratorApplication.class, args);
 	}
 
 }
