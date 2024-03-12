@@ -17,7 +17,8 @@ public class OutcomeExcelTest {
         String querySixMonth = "update casereview cr set cr.SCHEDULEDSTARTDATE = to_date('%s','DD/MM/YYYY HH24:MI:SS') where cr.CASEID = (select c.caseid from MTCUEAPOUTCOMESURVEY e join caseheader c on e.caseid = c.caseid and c.casereference = %s) and cr.REASONCODE = 'CR6';";
         String queryTwelveMonth = "update casereview cr set cr.SCHEDULEDSTARTDATE = to_date('%s','DD/MM/YYYY HH24:MI:SS') where cr.CASEID = (select c.caseid from MTCUEAPOUTCOMESURVEY e join caseheader c on e.caseid = c.caseid and c.casereference = %s) and cr.REASONCODE = 'CR7';";
 
-        File file = new File("/Users/mac/workspaces/xmlgenerator/src/main/resources/EAP_Outcome_WCG_1.xlsx");
+//        File file = new File("/Users/mac/workspaces/xmlgenerator/src/main/resources/EAP_Outcome_WCG_1.xlsx");
+        File file = new File("/Users/mac/workspaces/xmlgenerator/src/main/resources/EAP_Outcome_Bruce_County.xlsx");
         List<OutcomeExcel> ssaCountryList = Poiji.fromExcel(file, OutcomeExcel.class);
 
         for(OutcomeExcel outcomeExcel : ssaCountryList) {
