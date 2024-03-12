@@ -11,7 +11,7 @@ import java.util.List;
 public class OutcomeExcelTest {
     @Test
     public void ssaCountryExcelTest() throws IOException {
-        String query ="update MTCUEAPOUTCOMESURVEY mtcueos set mtcueos.eapoutcomedate = 'to_date('%s','DD/MM/YYYY HH24:MI:SS') where mtcueos.caseid = (select c.caseid from MTCUEAPOUTCOMESURVEY e join caseheader c on e.caseid = c.caseid and c.casereference =  %s);";
+        String query ="update MTCUEAPOUTCOMESURVEY mtcueos set mtcueos.eapoutcomedate = to_date('%s','DD/MM/YYYY HH24:MI:SS') where mtcueos.caseid = (select c.caseid from MTCUEAPOUTCOMESURVEY e join caseheader c on e.caseid = c.caseid and c.casereference =  %s);";
         String queryOneMonth = "update casereview cr set cr.SCHEDULEDSTARTDATE = to_date('%s','DD/MM/YYYY HH24:MI:SS') where cr.CASEID = (select c.caseid from MTCUEAPOUTCOMESURVEY e join caseheader c on e.caseid = c.caseid and c.casereference = %s) and cr.REASONCODE = 'CR14';";
         String queryThreeMonth = "update casereview cr set cr.SCHEDULEDSTARTDATE = to_date('%s','DD/MM/YYYY HH24:MI:SS') where cr.CASEID = (select c.caseid from MTCUEAPOUTCOMESURVEY e join caseheader c on e.caseid = c.caseid and c.casereference = %s) and cr.REASONCODE = 'CR5';";
         String querySixMonth = "update casereview cr set cr.SCHEDULEDSTARTDATE = to_date('%s','DD/MM/YYYY HH24:MI:SS') where cr.CASEID = (select c.caseid from MTCUEAPOUTCOMESURVEY e join caseheader c on e.caseid = c.caseid and c.casereference = %s) and cr.REASONCODE = 'CR6';";
