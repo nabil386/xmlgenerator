@@ -12,7 +12,7 @@ import java.util.List;
 public class EapPbfClosedCaseApprovalTest {
     @Test
     public void EapPbfClosedCaseApprovalExcelTest() throws IOException {
-        String query ="update casereview set approvedby='IAAP115057', approveddatetime=to_date('%s','DD-MON-RR HH24:MI:SS'), approvalstatus='ARS1' where caseid = (select caseid from mtcueapoutcomesurvey where outcomereferencenumber = %s) and reasoncode='%s';";
+        String query ="update casereview set approvedby='IAAP117059', approveddatetime=to_date('%s','DD-MON-RR HH24:MI:SS'), approvalstatus='ARS1' where caseid = (select caseid from mtcueapoutcomesurvey where outcomereferencenumber = %s) and reasoncode='%s';";
 
 // EAP_PBF-Closed_Case_Approval_Revisions-2023-24-WCG_.xlsx
 //        File file = new File("/Users/mac/workspaces/xmlgenerator/src/main/resources/EAP_Outcome_WCG_1.xlsx");
