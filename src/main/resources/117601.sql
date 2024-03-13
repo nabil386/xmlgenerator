@@ -1,0 +1,2 @@
+update casereview set approvedby='IAAP115057', approveddatetime=to_date('16-Jun-23 00:00:00','DD-MON-RR HH24:MI:SS'), approvalstatus='ARS1' where caseid=
+                                                                                                                                                  (select caseid from mtcueapoutcomesurvey where outcomereferencenumber = 5633875) and reasoncode='CR6';
