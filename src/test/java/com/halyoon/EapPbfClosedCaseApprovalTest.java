@@ -12,7 +12,8 @@ import java.util.List;
 public class EapPbfClosedCaseApprovalTest {
     @Test
     public void EapPbfClosedCaseApprovalExcelTest() throws IOException {
-        String query ="update casereview set approvedby='IAAP117059', approveddatetime=to_date('%s','DD-MON-RR HH24:MI:SS'), approvalstatus='ARS1' where caseid = (select caseid from mtcueapoutcomesurvey where outcomereferencenumber = %s) and reasoncode='%s';";
+
+        String query ="update casereview set approvedby='IAAP117059', approveddatetime=to_date('%s','DD/MM/YYYY HH24:MI:SS'), approvalstatus='ARS1' where caseid = (select caseid from caseheader where casereference = %s) and casereviewreference = %s and reasoncode='%s';";
 
 // EAP_PBF-Closed_Case_Approval_Revisions-2023-24-WCG_.xlsx
 //        File file = new File("/Users/mac/workspaces/xmlgenerator/src/main/resources/EAP_Outcome_WCG_1.xlsx");
@@ -20,7 +21,7 @@ public class EapPbfClosedCaseApprovalTest {
         List<EAPApproval> ssaCountryList = Poiji.fromExcel(file, EAPApproval.class);
 
         for(EAPApproval outcomeExcel : ssaCountryList) {
-            System.out.println(String.format(query, outcomeExcel.getApprovedDate()+" 00:00:00", outcomeExcel.getCheckpointRefNumber(), getSchedulerType(outcomeExcel.getScheduleType())));
+            System.out.println(String.format(query, outcomeExcel.getApprovedDate()+" 00:00:00", outcomeExcel.getRefNumber(), outcomeExcel.getCheckpointRefNumber(), getSchedulerType(outcomeExcel.getScheduleType())));
 
         }
 
