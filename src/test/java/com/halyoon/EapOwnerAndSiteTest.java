@@ -31,7 +31,7 @@ public class EapOwnerAndSiteTest {
             "                                                                                                                              join providerparty ppr on ppr.providerpartyid = mppe.providerpartyid\n" +
             "                                                                                                                              join concernrole cr on cr.concernroleid = mpe.providerconcernroleid --ppr.partyconcernroleid\n" +
             "                                                                                                                              left join emailaddress eml on cr.primaryemailaddressid = eml.emailaddressid\n" +
-            "                                                                                                                     where u.username = '%s')\n";
+            "                                                                                                                     where u.username = '%s');\n";
 
     @Test
     public void updateUserAndSite(){
