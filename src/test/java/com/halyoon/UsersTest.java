@@ -20,6 +20,9 @@ public class UsersTest {
         String q5 = "delete from TASKREDIRECTION where tousername = '%s';";
         String q6 = "delete from CASEAPPROVAL where username = '%s';";
         String q7 = "delete from USERLINK where username = '%s';";
+        String qu1 = "update CASEREVIEW set reviewerid = 'SYSTEM' where reviewerid = '%s';";
+        String qu2 = "update PLANNEDSUBGOAL set ownerid = 'SYSTEM' where ownerid = '%s';";
+        String qu3 = "update alert set username = 'SYSTEM' where username = '%s';";
         String q8 = "delete from users where username = '%s';";
 
         File file = new File("/Users/mac/workspaces/xmlgenerator/src/main/resources/users.xlsx");
@@ -33,6 +36,9 @@ public class UsersTest {
             System.out.println(String.format(q5, user.getUsername() ));
             System.out.println(String.format(q6, user.getUsername() ));
             System.out.println(String.format(q7, user.getUsername() ));
+            System.out.println(String.format(qu1, user.getUsername() ));
+            System.out.println(String.format(qu2, user.getUsername() ));
+            System.out.println(String.format(qu3, user.getUsername() ));
             System.out.println(String.format(q8, user.getUsername() ));
 
         }
