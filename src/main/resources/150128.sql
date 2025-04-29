@@ -1,0 +1,4 @@
+update planneditem set approvedby='IAAP122870', approveddatetime=to_date('13/03/2025 00:00:00','DD/MM/YYYY HH24:MI:SS') where planneditemreference = '16896651';
+update planneditem set approvedby='IAAP122870', approveddatetime=to_date('13/03/2025 00:00:00','DD/MM/YYYY HH24:MI:SS') where planneditemreference = '17453094';
+update planneditem set approvedby='IAAP122870', approveddatetime=to_date('13/03/2025 00:00:00','DD/MM/YYYY HH24:MI:SS') where planneditemreference = '16999436';
+update planneditem set approvedby='IAAP122870', approveddatetime=to_date('13/03/2025 00:00:00','DD/MM/YYYY HH24:MI:SS') where planneditemreference = '17193512';

@@ -1,0 +1,1 @@
+update planneditem set approvedby='IAAP114453', approveddatetime=to_date('20-03-2025 00:00:00','DD/MM/YYYY HH24:MI:SS') where planneditemreference = '18484975';
